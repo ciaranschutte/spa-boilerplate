@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -22,7 +22,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "connected-react-router": "^4.3.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
   }
 }
