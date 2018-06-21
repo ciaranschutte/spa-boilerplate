@@ -1,12 +1,37 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-const GenericNotFound = () => {
-	return <p>Generic Route Not Found</p>;
-};
+import NavBar from './components/navbar';
+import Menu from './components/menu';
+
+import Home from './pages/home';
+
+const GenericNotFound = () => (
+  <p>Generic Route Not Found</p>
+);
+
+const MainLayout = ({ children, ...rest }) => (
+  <div className='layout-container'>
+  <header>
+    <NavBar/>
+  </header>
+  <Menu/>
+  { children }
+  </div>
+);
+
+const DefaultLayoutRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={props => (
+    <MainLayout>
+      <Component {...props}/>
+    </MainLayout>
+  )}/>
+);
+
 
 const routes = (
   <Switch>
+    <DefaultLayoutRoute path='/' component={Home}/>
 		<Route component={GenericNotFound} />
   </Switch>
 );
