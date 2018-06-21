@@ -12,11 +12,11 @@ const GenericNotFound = () => (
 
 const MainLayout = ({ children, ...rest }) => (
   <div className='layout-container'>
-  <header>
-    <NavBar/>
-  </header>
-  <Menu/>
-  { children }
+    <header>
+      <NavBar/>
+    </header>
+    <Menu/>
+    { children }
   </div>
 );
 

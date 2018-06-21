@@ -1,5 +1,4 @@
 # Todo
-[ ] - add routing
 [ ] - add redux 
 
 [ ] - add API class
