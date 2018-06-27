@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import NavBar from './components/navbar';
-import Menu from './components/menu';
+import NavBar from './components/Navbar';
+import Menu from './components/Menu';
 
 import Home from './pages/home';
 import Todos from './pages/todos';
+
+import { navItems } from './mocks/nav';
 
 const GenericNotFound = () => (
   <p>Generic Route Not Found</p>
@@ -14,7 +16,7 @@ const GenericNotFound = () => (
 const MainLayout = ({ children, ...rest }) => (
   <div className='layout-container'>
     <header>
-      <NavBar/>
+      <NavBar items={navItems}/>
     </header>
     <Menu/>
     { children }

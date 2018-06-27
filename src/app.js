@@ -4,9 +4,9 @@ import Root from './pages/root.js';
 
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './reducers';
+//import rootReducer from './reducers';
 
-const store = createStore();
+const store = createStore((state = 0) => {return state});
 
 const App = () => (
   <Provider store={store}>
