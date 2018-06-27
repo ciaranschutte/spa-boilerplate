@@ -5,6 +5,7 @@ import NavBar from './components/navbar';
 import Menu from './components/menu';
 
 import Home from './pages/home';
+import Todos from './pages/todos';
 
 const GenericNotFound = () => (
   <p>Generic Route Not Found</p>
@@ -20,6 +21,7 @@ const MainLayout = ({ children, ...rest }) => (
   </div>
 );
 
+
 const DefaultLayoutRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     <MainLayout>
@@ -29,9 +31,11 @@ const DefaultLayoutRoute = ({ component: Component, ...rest }) => (
 );
 
 
+
 const routes = (
   <Switch>
     <DefaultLayoutRoute path='/' component={Home}/>
+    <DefaultLayoutRoute path='/todos' component={Todos}/>
 		<Route component={GenericNotFound} />
   </Switch>
 );
