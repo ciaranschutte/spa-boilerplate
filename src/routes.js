@@ -6,6 +6,7 @@ import Menu from './components/Menu';
 
 import Home from './pages/home';
 import Todos from './pages/todos';
+import Allo from './pages/allo';
 
 import { navItems } from './mocks/nav';
 
@@ -36,8 +37,9 @@ const DefaultLayoutRoute = ({ component: Component, ...rest }) => (
 
 const routes = (
   <Switch>
-    <DefaultLayoutRoute path='/' component={Home}/>
+    <DefaultLayoutRoute path='/' exact component={Home}/>
     <DefaultLayoutRoute path='/todos' component={Todos}/>
+    <DefaultLayoutRoute path='/allo' component={Allo}/>
 		<Route component={GenericNotFound} />
   </Switch>
 );

@@ -1,10 +1,10 @@
 export const navItems = [
   {
     title: 'Todo Page', 
-    link: '/todos'
+    path: '/todos'
   },
   {
     title: 'Allo Allo page!',
-    link: '/allo'
+    path: '/allo'
   },
 ]
