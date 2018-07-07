@@ -6,3 +6,5 @@
 [ ] - add styling
 
 [ ] - add linting
+
+[] - add prod webpack config

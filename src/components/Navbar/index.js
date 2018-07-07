@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import './Navbar.scss';
 
 /**
  * 
  * @param {*} param0 
  */
 const Navbar = ({ items }) => (
-  <div>
+  <div className='Navbar'>
     <p>Navbar</p>
     {
       items.map((el, i) => 
